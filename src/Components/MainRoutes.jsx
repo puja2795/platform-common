@@ -8,7 +8,7 @@ const MainRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
-        <Route path="catelog" element={<Catalouge />} />
+        <Route path="catalogue" element={<Catalouge />} />
         <Route path="cart" element={<Cart />} />
       </Route>
     </Routes>
