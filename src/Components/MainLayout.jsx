@@ -14,8 +14,9 @@ const MainLayout = () => {
   return (
     <div className={styles["main"]}>
       <div className={styles.header}>
-        <BsCart3 size={18} />
-        <div className={styles.count}>5</div>
+        <div onClick={() => navigate("/catalogue")}>My App</div>
+        <BsCart3 size={18} onClick={() => navigate("/cart")} />
+        {/* <div className={styles.count}>5</div> */}
       </div>
       <div className={styles.content}>
         <Outlet />

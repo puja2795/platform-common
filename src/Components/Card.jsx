@@ -9,7 +9,10 @@ const Card = ({ data }) => {
     setCount((prev) => prev + 1);
 
     axios
-      .post("http://localhost:8080/cart", { ...data, count: 1 })
+      .post("https://abrupt-skinny-kicker.glitch.me/cart", {
+        ...data,
+        count: 1,
+      })
       .then((res) => {
         console.log(res);
         console.log(count);
@@ -19,7 +22,7 @@ const Card = ({ data }) => {
   const handleDecreaseCount = () => {
     setCount((prev) => prev - 1);
     axios
-      .patch(`http://localhost:8080/cart/${data.id}`, {
+      .patch(`https://abrupt-skinny-kicker.glitch.me/cart/${data.id}`, {
         ...data,
         count,
       })
@@ -32,7 +35,7 @@ const Card = ({ data }) => {
   const handleIncreaseCount = () => {
     setCount((prev) => prev + 1);
     axios
-      .patch(`http://localhost:8080/cart/${data.id}`, {
+      .patch(`https://abrupt-skinny-kicker.glitch.me/cart/${data.id}`, {
         ...data,
         count,
       })

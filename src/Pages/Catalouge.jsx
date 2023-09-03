@@ -8,7 +8,7 @@ const Catalouge = () => {
 
   const getProducts = () => {
     axios
-      .get("http://localhost:8080/products")
+      .get("https://abrupt-skinny-kicker.glitch.me/products")
       .then((res) => setProducts(res.data));
   };
   useEffect(() => {
